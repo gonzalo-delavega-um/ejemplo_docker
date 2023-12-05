@@ -1,0 +1,11 @@
+services:
+  ejemplo:
+    environment:
+      ENV_APP_NAME: ${ENV_APP_NAME}
+      DB_NAME: ${DB_NAME}
+      DB_ECHO:
+    build: .
+    volumes:
+     - myapp:/home/db/
+volumes:
+  myapp:

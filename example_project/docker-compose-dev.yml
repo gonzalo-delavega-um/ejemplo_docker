@@ -1,0 +1,23 @@
+services:
+  ejemplo:
+    environment:
+      ENV_APP_NAME: development_mode
+      DB_NAME: proyecto_final_dev
+      DB_ECHO: 1
+    build: .
+    volumes:
+      - ./:/home/
+
+  redis-server:
+    image: "redis:alpine"
+
+  mysql-server:
+    image: "mysql"
+    volumes:
+      - mysql:/var/mysql
+
+# Define volumes
+volumes:
+  myapp:
+  mysql:
+

@@ -1,0 +1,11 @@
+services:
+  ejemplo:
+    environment:
+      ENV_APP_NAME: example_app_name
+      DB_NAME: proyectoFinalDBProgram
+      DB_ECHO: 
+    build: .
+    volumes:
+     - myapp:/home/db/
+volumes:
+  myapp:
